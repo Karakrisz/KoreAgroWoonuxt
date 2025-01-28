@@ -8,7 +8,7 @@ const {
   'sale-products',
   () =>
     useAsyncGql('getProducts', {
-      first: 5,
+      first: 4,
       orderby: 'POPULARITY',
       where: {
         onSale: true,
@@ -33,7 +33,7 @@ const onSaleProducts = computed(() => saleProductsData.value);
 <template>
   <section class="w-full py-[50px]">
     <div class="container">
-      <h2 class="pb-10">AKTUÁLIS AKCIÓINK</h2>
+      <!-- <h2 class="pb-10">AKTUÁLIS AKCIÓINK</h2> -->
 
       <TransitionGroup v-if="pending" name="fade" tag="div"
         class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[24px] pb-[35px]">
@@ -50,10 +50,11 @@ const onSaleProducts = computed(() => saleProductsData.value);
       <template v-else>
         <div v-if="error" class="text-center text-red-600 pb-[35px]">Failed to load products. Please try again later.
         </div>
-        <ProductRow v-else :products="onSaleProducts" class="pb-[35px]" />
+        <ProductRow v-else :products="onSaleProducts"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" />
       </template>
 
-      <div class="flex gap-[10px] items-center justify-center">
+      <div class="flex gap-[10px] items-center justify-center mt-10">
         <NuxtLink to="/products"
           class="px-6 py-3 font-medium text-white transition-colors bg-gray-900 rounded-full hover:bg-gray-800"> Több
           termék

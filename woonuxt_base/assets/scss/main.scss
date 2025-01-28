@@ -32,3 +32,16 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #231f20;
 }
+
+a.w-full.button.button-primary {
+  width: 90%;
+  margin: 1em auto;
+}
+
+.product-description-content {
+  padding: 0 0 0 7%;
+}
+
+.product-description-content__price {
+  padding: 1em 0;
+}

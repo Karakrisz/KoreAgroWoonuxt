@@ -36,22 +36,22 @@ const imagetoDisplay = computed<string>(() => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-[20px]">
-      <NuxtLink v-if="node.slug" :to="`/product/${decodeURIComponent(node.slug)}`" :title="node.name" class="w-full max-h-[216px] relative overflow-hidden grow-0">
-        <NuxtImg
-          v-if="imagetoDisplay"
-          :src="imagetoDisplay"
-          :alt="node.image?.altText || node.name || 'Product image'"
-          :title="node.image?.title || node.name"
-          :loading="index <= 3 ? 'eager' : 'lazy'"
-          class="object-cover w-full h-full transition hover:scale-105 duration-300"
-          placeholder
-          placeholder-class="blur-xl" />
-          <SaleBadge :node class="absolute top-2 right-2" />
-      </NuxtLink>
-    <NuxtLink class="text-[20px] font-bold uppercase hover:text-stone-700 transition" :to="`/product/${decodeURIComponent(node.slug)}`" :title="node.name">{{ node.name }}</NuxtLink>
-    <ProductPrice class="text-sm" :sale-price="node.salePrice" :regular-price="node.regularPrice" />
-    <div class="text-[14px] leading-[150%] flex-1" v-html="node.shortDescription"/>
-    <NuxtLink v-if="node.slug" :to="`/product/${decodeURIComponent(node.slug)}`" :title="node.name" class="w-full button button-primary">MEGRENDELÉS</NuxtLink>
+  <div class="flex flex-col gap-[20px] overflow-hidden rounded-rounded-5 shadow-Shadow bg-Light">
+    <NuxtLink v-if="node.slug" :to="`/product/${decodeURIComponent(node.slug)}`" :title="node.name"
+      class="w-full max-h-[216px] relative overflow-hidden grow-0">
+      <NuxtImg v-if="imagetoDisplay" :src="imagetoDisplay" :alt="node.image?.altText || node.name || 'Product image'"
+        :title="node.image?.title || node.name" :loading="index <= 3 ? 'eager' : 'lazy'"
+        class="object-cover w-full h-full transition hover:scale-105 duration-300" placeholder
+        placeholder-class="blur-xl" />
+      <SaleBadge :node class="absolute top-2 right-2" />
+    </NuxtLink>
+    <div class="product-description-content">
+      <NuxtLink class="text-[20px] font-bold uppercase hover:text-stone-700 transition roduct-description-content__name"
+        :to="`/product/${decodeURIComponent(node.slug)}`" :title="node.name">{{ node.name }}</NuxtLink>
+      <ProductPrice class="text-sm product-description-content__price" :sale-price="node.salePrice" :regular-price="node.regularPrice" />
+      <div class="text-[14px] leading-[150%] flex-1 product-description-content__description" v-html="node.shortDescription" />
+    </div>
+    <NuxtLink v-if="node.slug" :to="`/product/${decodeURIComponent(node.slug)}`" :title="node.name"
+      class="w-full button button-primary">MEGRENDELÉS</NuxtLink>
   </div>
 </template>

@@ -27,7 +27,7 @@
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <div v-for="post in posts" :key="post.title" class="group">
           <div
-            class="overflow-hidden transition duration-300 ease-in-out transform cursor-pointer bg-light hover:bg-gray-100"
+            class="overflow-hidden transition duration-300 ease-in-out transform cursor-pointer bg-Grey hover:bg-gray-100"
           >
             <NuxtImg
               :src="post.image"
