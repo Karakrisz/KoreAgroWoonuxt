@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply text-black;
-  }
 }
 
 @layer components {
@@ -15,10 +12,10 @@
   }
 
   .button {
-    @apply px-12 py-3 text-xs transition hover:bg-opacity-90 hover:brightness-[85%];
+    @apply px-8 py-[9px] flex justify-center items-center rounded-[52px] w-fit font-medium hover:brightness-95 hover:opacity-90 transition cursor-pointer;
 
     &.button-primary {
-      @apply bg-primary hover:bg-primary-dark text-black;
+      @apply bg-primary hover:bg-primary-dark text-white
     }
 
     &.button-secondary {
@@ -29,4 +26,9 @@
       @apply bg-disabled pointer-events-none opacity-50;
     }
   }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #231f20;
 }

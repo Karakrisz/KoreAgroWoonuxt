@@ -1,29 +1,20 @@
 <template>
- <section class="relative h-[718px] bg-gray-100">
-      <NuxtImg
-        src="/img/hero.webp"
-        class="absolute inset-0 object-cover w-full h-full pointer-events-none"
-        alt="Background"
-      />
-      <div
-        class="container relative z-10 flex flex-col items-start justify-center pt-24 sm:pt-36"
-      >
-        <div class="max-w-2xl mx-auto space-y-6">
-          <h1 class="mb-4 text-3xl font-thin md:text-4xl font-lexend">
-            Bakony Bútor - A harmónia otthonában
-          </h1>
-          <p class="font-light">
-            Kiváló alapanyagokból, gondos kezek által készített bútoraink a
-            funkcionalitást és az időtálló szépséget egyesítik. Legyen szó
-            nappaliról, hálószobáról vagy étkezőről, nálunk megtalálja azt a
-            bútort, amely stílusával és kényelmével otthona központi eleme lesz.
-            Fedezze fel kínálatunkat, és varázsolja otthonát a nyugalom
-            szigetévé!
+  <section class="w-full pb-[53px] pt-16 relative z-0 -mt-5">
+    <div class="container relative z-10">
+      <div class="max-w-lg p-10 bg-Light shadow-Shadow rounded-rounded-5">
+        <h1 class="mb-4 font-semibold">KORE Agro – A mezőgazdaság motorja</h1>
+        <div class="mb-6">
+          <p class="leading-[20px]">
+            Nálunk a technológia találkozik a természettel. Új és használt mezőgazdasági gépek gazdag kínálatával
+            segítjük Önt abban, hogy a legjobb teljesítményt hozza ki földjeiből. Külföldről behozott használt gépeink
+            minden esetben szigorú ellenőrzésen mennek keresztül, így Ön biztos lehet benne, hogy csakis megbízható,
+            kiemelkedő minőségű eszközöket kap.
           </p>
-          <button class="bg-white button hover:bg-button hover:brightness-100">
-            Fedezze fel kínálatunkat
-          </button>
+          <p>Fedezze fel kínálatunkat, és vigye vállalkozását új szintre a legjobb mezőgazdasági gépekkel!</p>
         </div>
+        <NuxtLink to="#" class="bg-Tertiary button">Tekintse meg választékunkat</NuxtLink>
       </div>
-    </section>
+    </div>
+    <NuxtImg src="/img/IMG_Hero_bg.jpg" class="absolute bottom-0 object-cover w-full h-full"></NuxtImg>
+  </section>
 </template>

@@ -1,10 +1,8 @@
 <template>
   <main>
     <Hero />
-    <NextHero />
-    <!-- <Discounts /> -->
     <CategorySec />
-    <AboutSec />
+    <Discounts />
     <BlogSec />
   </main>
 </template>
