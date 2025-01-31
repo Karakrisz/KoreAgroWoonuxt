@@ -3,7 +3,7 @@
     <Hero />
     <CategorySec />
     <Discounts />
-    <BlogSec />
+    <!-- <BlogSec /> -->
   </main>
 </template>
 

@@ -56,22 +56,31 @@ onUnmounted(() => {
     <div
       class="items-center justify-center hidden w-full h-8 gap-4 px-4 text-xs transition-all duration-300 md:flex bg-Grey md:text-sm"
       :class="{ 'h-0 overflow-hidden': isScrolled }">
-      <MenuTrigger class="lg:hidden" />
       <p class="hidden md:block"><span class="font-semibold">Nyitvatartás: </span>Hétfő - Pétek: 7:30 - 16:00</p>
       <div class="hidden md:block h-3.5 w-[1px] bg-Grey-2"></div>
       <p class="font-semibold">+36 70 775 56 66</p>
     </div>
 
     <div class="relative w-full bg-Light shadow-Shadow md:shadow-none">
-      <div class="container flex items-center justify-between gap-4 px-4 py-4 md:py-7 md:gap-9 md:px-0">
+      <div class="container flex items-center justify-between gap-4 px-4 py-4 md:py-7 md:gap-9 md:px-0 menu-content">
+        <MenuTrigger class="lg:hidden menu-icon" />
         <NuxtLink to="/" class="flex-shrink-0 transition-transform duration-300 hover:scale-105">
           <NuxtImg src="/img/logo.svg" class="w-[150px] md:w-[202px] pb-1"></NuxtImg>
         </NuxtLink>
+        <div class="mobile-view-login-cart-container">
+          <SignInLink />
+          <CartTrigger />
+        </div>
         <div class="relative flex-1 hidden md:block">
-          <input
+          <!-- <input
             class="w-full pl-6 transition-all duration-300 border-0 pr-14 placeholder:text-Grey-2 bg-light rounded-rounded-7 shadow-Shadow focus:ring-Primary focus:shadow-lg"
             placeholder="Keressen a termékek között..." />
-          <PhosphorIconMagnifyingGlass class="absolute translate-y-1/2 top-1 right-6" />
+          <PhosphorIconMagnifyingGlass class="absolute translate-y-1/2 top-1 right-6" /> -->
+          <div class="flex items-center gap-4">
+            <ProductSearch class="hidden md:inline-flex w-full" />
+            <SignInLink />
+            <CartTrigger />
+          </div>
         </div>
         <NuxtLink
           class="hidden px-4 py-2 transition-all duration-300 rounded-full md:block bg-Primary button text-Light hover:bg-opacity-90 hover:shadow-md">

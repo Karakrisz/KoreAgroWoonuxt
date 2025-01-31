@@ -45,3 +45,25 @@ a.w-full.button.button-primary {
 .product-description-content__price {
   padding: 1em 0;
 }
+
+.mobile-view-login-cart-container {
+  display: none;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .menu-icon {
+   display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-content {
+    justify-content: space-between;
+    padding-left: 1.7em;
+  }
+  .mobile-view-login-cart-container {
+    display: block;
+  }
+}
